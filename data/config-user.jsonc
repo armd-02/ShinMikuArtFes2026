@@ -143,6 +143,7 @@
     "poiView": {
         "poiActLoad": true,
         "poiZoom": {
+            "activity": 12,
             "ShinMikuArtFes2025": 12,
             "bicycle_rental": 12,
             "Green": 13

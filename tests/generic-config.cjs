@@ -9,6 +9,7 @@ const columns = parse('data/listtable.jsonc').list.columns;
 assert.equal(config.static.use, true);
 assert.deepEqual(Array.from(config.map.viewCenter), [135.49237, 34.73928]);
 assert.equal(config.poiView.poiFilter, 'filter');
+assert.equal(config.poiView.poiZoom[config.activity.targetName], 12, 'building-only activity venues must have a display zoom');
 assert.equal(config.listTable.category, 'activity');
 assert.equal(config.listTable.allActs, true);
 assert.equal(config.activity.authMode, 'basic');
