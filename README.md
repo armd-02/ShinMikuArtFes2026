@@ -22,7 +22,7 @@ https://armd-01.sakura.ne.jp/community-mapmaker-backend/api/activities.php?app=s
 - `data/st_stores.json` と `data/st_green.json` は、2026年11月12日に `https://armd-01.sakura.ne.jp/api/interpreter` から既存全件と不足していた会場を再取得しました。取得元のOSM更新基準時刻は2026年11月12日6:07:21（日本時間）です。バックエンド133レコードが参照する44件のOSMIDをすべて収録し、道路・建物の形状に必要なノードも含めています。元データのODbL表記は保持しています。
 - バックエンドの画像パスは `store/`・`actor/` 配下を参照します。ファイル名だけの旧形式は `etc.relativePath`（`./stores/`）を付け、フォルダーを含むパス・絶対URL・Wikimedia Commons指定は保持します。
 - サイト名・OGP・訪問記録の保存キーは2026年度版です。訪問記録は2025年度版と分けて保存します。
-- 開催日入りの旧表紙に代わり、日程を含まない `image/splash-2026.svg` と共有用の `image/ogimage-2026.png` を用意しています。
+- 表紙・起動時の画像とOGP共有画像には `image/splash.jpg` を使用しています。
 - 閲覧用として編集モードと編集切り替えは無効です。新しい任意機能（3Dモデル、屋内表示、ニュース等）は無効にしています。
 - Google Analyticsの計測IDは2025年版の設定を引き継いでいます（`manifest.json` の `gId`）。
 

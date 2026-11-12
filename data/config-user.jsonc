@@ -430,7 +430,7 @@
         "localSave": "ShinMikuArtFes2026",
         "reverseIcon": false,
         "editMode": false,
-        "splashUrl": "./image/splash-2026.svg",
+        "splashUrl": "./image/splash.jpg",
         "loadingUrl": "./image/loading.gif",
         "relativePath": "./stores/"
     },
