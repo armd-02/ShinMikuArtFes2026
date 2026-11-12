@@ -1,0 +1,322 @@
+{
+    "listUnnamed": {
+        "ja": "名称不明",
+        "en": "Unnamed place"
+    },
+    "site_title": {
+        "ja": "新大阪・三国アートフェスマップ2026",
+        "en": "Shin-Osaka / Mikuni Art Festival Map 2026"
+    },
+    "site_subtitle": {
+        "ja": "新大阪・三国アートフェス実行委員会",
+        "en": "Shin-Osaka / Mikuni Art Festival Executive Committee"
+    },
+    "about": {
+        "ja": "新大阪・三国アートフェスマップ2026について",
+        "en": "about Shin-Osaka / Mikuni Art Festival Map 2026"
+    },
+    "about_message": {
+        "ja": "新大阪・三国アートフェス実行委員会が主催しているイベントや施設情報を表示します。",
+        "en": "Displays information on events and facilities sponsored by the Shin-Osaka / Mikuni Art Festival Executive Committee."
+    },
+    "owner": {
+        "ja": "プロジェクトのブログ・サイトへ",
+        "en": "To the project blog site"
+    },
+    "licence_title": {
+        "ja": "利用しているデータについて",
+        "en": "About the data"
+    },
+    "licence_message": {
+        "ja": "新大阪・三国アートフェスマップ2026のデータはOpenStreetMapと独自データを組み合わせています。",
+        "en": "The data of Shin-Osaka / Mikuni Art Festival Map 2026 is a combination of OpenStreetMap and original."
+    },
+    "develop_site": {
+        "ja": "",
+        "en": ""
+    },
+    "official_site": {
+        "ja": "公式サイト",
+        "en": "Official site"
+    },
+    "more_message": {
+        "ja": "",
+        "en": ""
+    },
+    "listCategory": {
+        "ja": "種類",
+        "en": "Category"
+    },
+    "listName": {
+        "ja": "施設名",
+        "en": "Name"
+    },
+    "listComment": {
+        "ja": "💬 ",
+        "en": "💬 "
+    },
+    "listTitle": {
+        "ja": "会場・作品一覧",
+        "en": "Venues and artworks"
+    },
+    "activities": {
+        "ja": "活動履歴",
+        "en": "Activities"
+    },
+    "actdate": {
+        "ja": "確認日",
+        "en": "Disaster Date"
+    },
+    "act_title": {
+        "ja": "【題名】",
+        "en": "[Subject] "
+    },
+    "act_attention": {
+        "ja": "写真URLにWikimedia Commonsを指定する時は、タイトルを入力してください(例 File:遊具名.jpg)",
+        "en": "When specifying Wikimedia Commons for the photo URL, enter the title (e.g. File: Play equipment name.jpg)"
+    },
+    "act_date": {
+        "ja": "確認日",
+        "en": "Disaster Date"
+    },
+    "act_address": {
+        "ja": "【住所】",
+        "en": "[Address] "
+    },
+    "act_genre": {
+        "ja": "【ジャンル】",
+        "en": "[Genre] "
+    },
+    "act_keyword": {
+        "ja": "キーワード",
+        "en": "keyword"
+    },
+    "act_memo": {
+        "ja": "",
+        "en": ""
+    },
+    "act_official_url": {
+        "ja": "公式サイトURL",
+        "en": "Public Site URL"
+    },
+    "act_recommend_url": {
+        "ja": "オススメURL",
+        "en": "Recommend URL"
+    },
+    "act_detail_url": {
+        "ja": "【詳細URL】",
+        "en": "[detail URL] "
+    },
+    "act_picture_url1": {
+        "ja": "【写真URL1】",
+        "en": "[Picture URL1] "
+    },
+    "act_picture_url2": {
+        "ja": "【写真URL2】",
+        "en": "[Picture URL2] "
+    },
+    "act_picture_url3": {
+        "ja": "【写真URL3】",
+        "en": "[Picture URL3] "
+    },
+    "act_picture_url4": {
+        "ja": "【写真URL4】",
+        "en": "[Picture URL4] "
+    },
+    "act_picture_url5": {
+        "ja": "【写真URL5】",
+        "en": "[Picture URL5]"
+    },
+    "act_picture_url6": {
+        "ja": "【写真URL6】",
+        "en": "[Picture URL6]"
+    },
+    "act_picture_url7": {
+        "ja": "【写真URL7】",
+        "en": "[Picture URL7]"
+    },
+    "act_picture_url8": {
+        "ja": "写真URL8",
+        "en": "Picture URL8"
+    },
+    "act_video_url1": {
+        "ja": "動画URL1",
+        "en": "Video URL1"
+    },
+    "act_license_attention": {
+        "ja": "投稿された情報はオープンデータ(CC0)として公開されます。内緒の情報などは書かないでください。",
+        "en": "The posted information will be published as open data (CC0), so please do not include any confidential information."
+    },
+    "libc": {
+        "ja": "年表",
+        "en": "chronology"
+    },
+    "higayodo_field_actdate": {
+        "ja": "投稿日",
+        "en": "Actdate"
+    },
+    "higayodo_field_title": {
+        "ja": "タイトル",
+        "en": "Title"
+    },
+    "higayodo_field_body": {
+        "ja": "本文",
+        "en": "Body"
+    },
+    "higayodo_field_category": {
+        "ja": "カテゴリ",
+        "en": "Category"
+    },
+    "higayodo_field_memo": {
+        "ja": "メモ",
+        "en": "Memo"
+    },
+    "higayodo_field_address": {
+        "ja": "住所",
+        "en": "Address"
+    },
+    "higayodo_field_openning": {
+        "ja": "開催時間",
+        "en": "Openning"
+    },
+    "higayodo_field_detail_url": {
+        "ja": "詳細URL",
+        "en": "Detail Url"
+    },
+    "higayodo_field_picture_url1": {
+        "ja": "写真URL1",
+        "en": "Picture Url1"
+    },
+    "higayodo_field_picture_url2": {
+        "ja": "写真URL2",
+        "en": "Picture Url2"
+    },
+    "higayodo_field_picture_url3": {
+        "ja": "写真URL3",
+        "en": "Picture Url3"
+    },
+    "list_religion_label": {
+        "ja": "宗教：",
+        "en": "Religion: "
+    },
+    "list_denomination_label": {
+        "ja": "宗派：",
+        "en": "Denomination: "
+    },
+    "list_start_date_label": {
+        "ja": "年代：",
+        "en": "Date: "
+    },
+    "religion_buddhist": {
+        "ja": "仏教",
+        "en": "Buddhism"
+    },
+    "religion_shinto": {
+        "ja": "神道",
+        "en": "Shinto"
+    },
+    "religion_christian": {
+        "ja": "キリスト教",
+        "en": "Christianity"
+    },
+    "religion_muslim": {
+        "ja": "イスラム教",
+        "en": "Islam"
+    },
+    "religion_jewish": {
+        "ja": "ユダヤ教",
+        "en": "Judaism"
+    },
+    "religion_hindu": {
+        "ja": "ヒンドゥー教",
+        "en": "Hinduism"
+    },
+    "religion_taoist": {
+        "ja": "道教",
+        "en": "Taoism"
+    },
+    "denomination_jodo_shinshu": {
+        "ja": "浄土真宗",
+        "en": "Jodo Shinshu"
+    },
+    "denomination_jodo_shu": {
+        "ja": "浄土宗",
+        "en": "Jodo Shu"
+    },
+    "denomination_nichiren": {
+        "ja": "日蓮宗",
+        "en": "Nichiren"
+    },
+    "denomination_zen": {
+        "ja": "禅宗",
+        "en": "Zen"
+    },
+    "denomination_soto": {
+        "ja": "曹洞宗",
+        "en": "Soto"
+    },
+    "denomination_rinzai": {
+        "ja": "臨済宗",
+        "en": "Rinzai"
+    },
+    "denomination_shingon": {
+        "ja": "真言宗",
+        "en": "Shingon"
+    },
+    "denomination_tendai": {
+        "ja": "天台宗",
+        "en": "Tendai"
+    },
+    "denomination_catholic": {
+        "ja": "カトリック",
+        "en": "Catholic"
+    },
+    "denomination_protestant": {
+        "ja": "プロテスタント",
+        "en": "Protestant"
+    },
+    "denomination_orthodox": {
+        "ja": "正教会",
+        "en": "Orthodox"
+    },
+    "act_category": {
+        "ja": "【カテゴリ】",
+        "en": "Category"
+    },
+    "act_actor": {
+        "ja": "【出演/作家】",
+        "en": "[Actor]"
+    },
+    "act_datetime": {
+        "ja": "【開催日時】",
+        "en": "[DateTime]"
+    },
+    "act_enter": {
+        "ja": "【来場時】",
+        "en": "[Entering]"
+    },
+    "act_fee": {
+        "ja": "【料金】",
+        "en": "[Fee]"
+    },
+    "act_reserve": {
+        "ja": "【予約方法】",
+        "en": "[Reserve]"
+    },
+    "act_organizer": {
+        "ja": "【主催】",
+        "en": "Organizer"
+    },
+    "act_contact": {
+        "ja": "【問合せ】",
+        "en": "Contact"
+    },
+    "act_actor_profile": {
+        "ja": "【プロフィール】",
+        "en": "[Profile]"
+    },
+    "act_openning": {
+        "ja": "【営業時間】",
+        "en": "[openning] "
+    }
+}
