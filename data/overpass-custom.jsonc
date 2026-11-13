@@ -48,6 +48,7 @@
                 "viewArea": true,
                 "imageIcon": "bicycle_rental.png", // "poiView: false"時のアイコン
                 "imageSize": 0.3,
+                "textAnchor": "top",
                 "stroke": "#0000ff",
                 "stroke-width": 0,
                 "fill-opacity": 0.5

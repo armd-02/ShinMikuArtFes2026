@@ -19,10 +19,12 @@ https://armd-01.sakura.ne.jp/community-mapmaker-backend/api/activities.php?app=s
 認証方式は `activity.authMode: "basic"` です。閲覧時に認証情報は不要で、編集モードは引き続き無効です。返却IDが `ShinMiku/...` のため、`data/config-activities.jsonc` に `ShinMiku` フォームを追加しています。2025年版Google Apps Scriptへの接続は使用しません。
 
 - 地図中心・表示範囲、カテゴリ、会場・作品・出演者・日時の表示項目は2025年版がベースです。
-- `data/st_stores.json` と `data/st_green.json` は、2026年11月12日に `https://armd-01.sakura.ne.jp/api/interpreter` から既存全件と不足していた会場を再取得しました。取得元のOSM更新基準時刻は2026年11月12日6:07:21（日本時間）です。バックエンド133レコードが参照する44件のOSMIDをすべて収録し、道路・建物の形状に必要なノードも含めています。元データのODbL表記は保持しています。
+- `data/st_stores.json` と `data/st_green.json` は、2026年11月12日に `https://armd-01.sakura.ne.jp/api/interpreter` から取得したデータです。取得元のOSM更新基準時刻は2026年11月12日6:07:21（日本時間）です。`st_stores.json` は2026年11月13日時点のバックエンドが参照する会場とその構成要素、および会場範囲の各方向に10%の余白を加えた範囲内のレンタサイクルに絞っています。`st_green.json` のレンタサイクルも同じ範囲に絞っています。元データのODbL表記は保持しています。
 - バックエンドの画像パスは `store/`・`actor/` 配下を参照します。ファイル名だけの旧形式は `etc.relativePath`（`./stores/`）を付け、フォルダーを含むパス・絶対URL・Wikimedia Commons指定は保持します。
 - サイト名・OGP・訪問記録の保存キーは2026年度版です。訪問記録は2025年度版と分けて保存します。
 - 表紙・起動時の画像とOGP共有画像には `image/splash.jpg` を使用しています。
+- 施設詳細の「経路を検索」からGoogleマップで経路と移動手段を選べます（`directions.use: true`）。
+- OSMの営業時間は施設詳細に表示しません（`poiView.openingHours: false`）。イベントの開催日時は登録データのとおり表示します。
 - 閲覧用として編集モードと編集切り替えは無効です。新しい任意機能（3Dモデル、屋内表示、ニュース等）は無効にしています。
 - Google Analyticsの計測IDは2025年版の設定を引き継いでいます（`manifest.json` の `gId`）。
 

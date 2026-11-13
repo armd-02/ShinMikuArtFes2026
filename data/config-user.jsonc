@@ -62,7 +62,7 @@
         }
     },
     "mapIllustrations": {
-        "use": false,
+        "use": true,
         "autoHide": false,
         "referenceZoom": 15,
         "minZoom": 0,
@@ -82,10 +82,35 @@
         },
         "avoidPaddingPx": 24,
         "illustrationGapPx": 40,
-        "items": []
+        "items": [
+            {
+                "id": "festival-frame",
+                "image": "./image/juso-map-frame.png",
+                "shadow": { "use": false },
+                "priority": -10,
+                "corners": [
+                    [135.4705, 34.7505],
+                    [135.5177, 34.7505],
+                    [135.5177, 34.727],
+                    [135.4705, 34.727]
+                ]
+            },
+            {
+                "id": "festival-frame-splash",
+                "image": "./image/splash.jpg",
+                "bounds": [135.4715, 34.744732, 135.4773, 34.7495],
+                "shadow": { "use": false }
+            },
+            {
+                "id": "festival-frame-sanyodo",
+                "image": "./image/sanyodo.jpg",
+                "bounds": [135.5096, 34.728, 135.5167, 34.731352],
+                "shadow": { "use": false }
+            }
+        ]
     },
     "minimap": {
-        "use": true,
+        "use": false,
         "height": 200,
         "initZoom": 2,
         "viewCenter": [
@@ -95,19 +120,19 @@
     },
     "icon": {
         "photoMarkers": {
-            "use": false,
+            "use": true,
             "maxMarkers": 100,
             "imageFields": []
         },
         "fgPath": "icon",
         "bgPath": "image",
         "flagPath": "./flags/w40",
-        "shadow": 0.6,
-        "attention": 0.55,
-        "green": 0.6,
-        "middle": 0.7,
-        "visited": 0.4,
-        "normal": 0.6,
+        "shadow": 0.69,
+        "attention": 0.63,
+        "green": 0.69,
+        "middle": 0.8,
+        "visited": 0.46,
+        "normal": 0.69,
         "flag": 0.5,
         "textFont": [
             "Noto Sans Regular"
@@ -141,6 +166,7 @@
         }
     },
     "poiView": {
+        "openingHours": false,
         "poiActLoad": true,
         "poiZoom": {
             "activity": 12,
@@ -336,8 +362,8 @@
     },
     "thumbnail": {
         "backend": {
-            "use": false,
-            "url": "",
+            "use": true,
+            "url": "https://armd-01.sakura.ne.jp/community-mapmaker-backend/api/thumbnail.php?app=shinmikuartfes2026",
             "concurrency": 2
         },
         "use": true,
@@ -425,7 +451,7 @@
         "image": true
     },
     "etc": {
-        "showPersonalMemo": true,
+        "showPersonalMemo": false,
         "editModeSwitch": false,
         "localSave": "ShinMikuArtFes2026",
         "reverseIcon": false,
@@ -537,6 +563,6 @@
         "use": false
     },
     "directions": {
-        "use": false
+        "use": true
     }
 }
