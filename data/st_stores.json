@@ -2915,11 +2915,11 @@
             "id": 13897945780,
             "lat": 34.7380998,
             "lon": 135.4858995,
-            "timestamp": "2026-11-01T02:05:54Z",
-            "version": 4,
-            "changeset": 191300976,
-            "user": "t_matsukura",
-            "uid": 21292672,
+            "timestamp": "2026-11-15T13:27:12Z",
+            "version": 5,
+            "changeset": 191983899,
+            "user": "K_Sakanoshita",
+            "uid": 389520,
             "tags": {
                 "addr:block_number": "25番",
                 "addr:city": "大阪市",
@@ -2935,7 +2935,7 @@
                 "contact:facebook": "https://www.facebook.com/rokugenya001/",
                 "contact:instagram": "rokugenya",
                 "contact:twitter": "rokugenya",
-                "name": "六弦家"
+                "name": "六弦家本店"
             }
         },
         {
