@@ -1423,6 +1423,12 @@
                 "image": "./image/sanyodo.jpg",
                 "bounds": [135.5096, 34.728, 135.5167, 34.731352],
                 "shadow": { "use": false }
+            },
+            {
+                "id": "mikuni-bus",
+                "image": "./image/mikuni-bus.png",
+                "bounds": [135.4743, 34.7294, 135.4805, 34.7333],
+                "shadow": { "use": false }
             }
         ]
     },

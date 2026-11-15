@@ -3130,11 +3130,11 @@
             "id": 13904009144,
             "lat": 34.7400345,
             "lon": 135.4923918,
-            "timestamp": "2026-11-01T02:03:35Z",
-            "version": 3,
-            "changeset": 191300950,
-            "user": "t_matsukura",
-            "uid": 21292672,
+            "timestamp": "2026-11-15T12:40:43Z",
+            "version": 4,
+            "changeset": 191981812,
+            "user": "K_Sakanoshita",
+            "uid": 389520,
             "tags": {
                 "addr:block_number": "2番",
                 "addr:city": "大阪市",
@@ -3150,7 +3150,7 @@
                 "community_centre": "family_centre",
                 "contact:instagram": "hugroom.osaka",
                 "name": "hug room",
-                "name:ja": "はぐるーむ"
+                "name:ja-Hira": "はぐるーむ"
             }
         },
         {
