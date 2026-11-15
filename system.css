@@ -574,6 +574,31 @@ tr.selected td {
     height: 38px;
 }
 
+.keyword-suggestions {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    max-height: 240px;
+    overflow-y: auto;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 3px 8px #0002;
+}
+.keyword-suggestions[hidden] { display: none; }
+.keyword-suggestions button {
+    display: block;
+    width: 100%;
+    padding: 8px 12px;
+    border: 0;
+    background: white;
+    text-align: left;
+}
+.keyword-suggestions button:hover,
+.keyword-suggestions button[aria-selected="true"] { background: #eaf2ff; }
+
 .search-box .search-btn {
     position: absolute;
     top: 50%;

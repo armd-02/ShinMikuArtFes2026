@@ -338,6 +338,10 @@
         "ja": "キーワード検索",
         "en": "searchKeyword"
     },
+    "clearKeyword": {
+        "ja": "検索をクリア",
+        "en": "Clear search"
+    },
     "poiFilter_visitAny": {
         "ja": "すべて",
         "en": "All"
@@ -959,7 +963,7 @@
         "en": "Loaded places only"
     },
     "discovery_noMatches": {
-        "ja": "読み込み済みの場所に該当するものがありません。目的を変えるか、地図を移動・拡大して探せます。",
+        "ja": "見つかりません。",
         "en": "No matching loaded places. Change the purpose, move or zoom the map."
     },
     "placeListView": {

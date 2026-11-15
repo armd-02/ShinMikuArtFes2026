@@ -732,10 +732,61 @@ class CMapMaker extends IndoorControl {
         mapLibre.on('moveend', () => newsTicker.update())
         mapLibre.on('zoomend', this.eventZoomMap.bind(cMapMaker))			// ズーム終了時に表示更新
         list_category.addEventListener('change', this.eventChangeCategory.bind(cMapMaker))	// category change
+        const suggestions = document.getElementById('list_keyword_suggestions');
+        let suggestionIndex = -1;
+        const closeSuggestions = () => {
+            if (!suggestions) return;
+            suggestions.hidden = true;
+            list_keyword.setAttribute('aria-expanded', 'false');
+            list_keyword.removeAttribute('aria-activedescendant');
+            suggestionIndex = -1;
+        };
+        const chooseSuggestion = value => {
+            list_keyword.value = value;
+            closeSuggestions();
+            cMapMaker.searchKeyword(value, { selectFirst: true });
+        };
+        const updateSuggestions = () => {
+            if (!suggestions) return;
+            suggestions.replaceChildren(...listTable.keywordSuggestions(list_keyword.value).map(value => {
+                const option = document.createElement('button');
+                option.type = 'button';
+                option.setAttribute('role', 'option');
+                option.textContent = value;
+                option.addEventListener('mousedown', event => event.preventDefault());
+                option.addEventListener('click', () => chooseSuggestion(value));
+                return option;
+            }));
+            suggestionIndex = -1;
+            suggestions.hidden = suggestions.children.length === 0;
+            list_keyword.setAttribute('aria-expanded', String(!suggestions.hidden));
+            list_keyword.removeAttribute('aria-activedescendant');
+        };
+        list_keyword.addEventListener('input', event => {
+            if (!event.isComposing) updateSuggestions();
+        });
+        list_keyword.addEventListener('compositionend', updateSuggestions);
+        list_keyword.addEventListener('focus', updateSuggestions);
+        list_keyword.addEventListener('blur', () => setTimeout(closeSuggestions, 150));
         list_keyword.addEventListener('keydown', (event) => {
-            if (event.key !== 'Enter') return;
-            event.preventDefault();
-            cMapMaker.searchKeyword(list_keyword.value);
+            if (event.isComposing) return;
+            const options = suggestions && !suggestions.hidden ? [...suggestions.children] : [];
+            if ((event.key === 'ArrowDown' || event.key === 'ArrowUp') && options.length) {
+                event.preventDefault();
+                suggestionIndex = (suggestionIndex + (event.key === 'ArrowDown' ? 1 : -1) + options.length) % options.length;
+                options.forEach((option, index) => {
+                    option.id = `keyword_suggestion_${index}`;
+                    option.setAttribute('aria-selected', String(index === suggestionIndex));
+                });
+                list_keyword.setAttribute('aria-activedescendant', options[suggestionIndex].id);
+                options[suggestionIndex].scrollIntoView({ block: 'nearest' });
+            } else if (event.key === 'Escape') {
+                closeSuggestions();
+            } else if (event.key === 'Enter') {
+                event.preventDefault();
+                if (suggestionIndex >= 0 && options[suggestionIndex]) chooseSuggestion(options[suggestionIndex].textContent);
+                else { closeSuggestions(); cMapMaker.searchKeyword(list_keyword.value); }
+            }
         });
     }
 
@@ -745,9 +796,11 @@ class CMapMaker extends IndoorControl {
         if (!date) {
             list_category.value = "";
             list_keyword.value = "";
+            this.resetKeywordSearchState();
         } else if (config.category !== "*" && !listTable.getSelCategory().includes(config.category)) {
             list_category.value = config.category;
             list_keyword.value = "";
+            this.resetKeywordSearchState();
         }
         listTable.eventDate = date;
         this.refreshLocalFilters();
@@ -854,6 +907,7 @@ class CMapMaker extends IndoorControl {
             this.changeMode("list");
             list_category.value = "";
             list_keyword.value = "";
+            this.resetKeywordSearchState();
             const url = new URL(location.href);
             url.searchParams.delete("category");
             if (enabled) url.searchParams.set("edit", "true");
@@ -1277,13 +1331,62 @@ class CMapMaker extends IndoorControl {
     }
 
     // キーワード検索
-    searchKeyword(keyword) {
+    searchKeyword(keyword, { selectFirst = false } = {}) {
         if (keyword !== null) {
+            if (String(keyword).trim() && !this.keywordSearchActive) {
+                const map = mapLibre.map;
+                this.keywordSearchCamera = map ? { center: map.getCenter(), zoom: map.getZoom(), bearing: map.getBearing(), pitch: map.getPitch() } : null;
+            }
+            this.keywordSearchActive = Boolean(String(keyword).trim());
+            this.updateKeywordButton();
             this.changeMode('list')
             if (winCont.sidebarSize === 1) winCont.setSidebar("list");
-            setTimeout(() => { listTable.filterKeyword(keyword) }, 300)
+            clearTimeout(this.keywordSearchTimer);
+            this.keywordSearchTimer = setTimeout(() => {
+                listTable.filterKeyword(keyword);
+                const first = selectFirst && listTable.getFilterList()[0];
+                if (first) listTable.select(first[0]);
+            }, 300)
             areaSearchController.renderDisplayStatus();
         }
+    }
+
+    updateKeywordButton() {
+        const button = document.getElementById("list_keyword_button");
+        const icon = document.getElementById("list_keyword_search");
+        const label = glot.get(this.keywordSearchActive ? "clearKeyword" : "searchKeyword")
+            || (this.keywordSearchActive ? (LANG === "ja" ? "検索をクリア" : "Clear search") : (LANG === "ja" ? "キーワード検索" : "Search"));
+        button?.setAttribute("aria-label", label);
+        button?.setAttribute("title", label);
+        icon?.classList.toggle("fa-search", !this.keywordSearchActive);
+        icon?.classList.toggle("fa-xmark", Boolean(this.keywordSearchActive));
+    }
+
+    resetKeywordSearchState() {
+        clearTimeout(this.keywordSearchTimer);
+        this.keywordSearchActive = false;
+        this.keywordSearchCamera = null;
+        this.updateKeywordButton();
+    }
+
+    keywordButtonAction() {
+        if (!this.keywordSearchActive) {
+            this.searchKeyword(list_keyword.value);
+            return;
+        }
+        const camera = this.keywordSearchCamera;
+        this.resetKeywordSearchState();
+        list_keyword.value = "";
+        const suggestions = document.getElementById("list_keyword_suggestions");
+        if (suggestions) suggestions.hidden = true;
+        list_keyword.setAttribute("aria-expanded", "false");
+        list_keyword.removeAttribute("aria-activedescendant");
+        if (this.detail) this.clearDatail();
+        this.changeMode("list");
+        listTable.filterKeyword("");
+        geoCont.writePoiCircle();
+        areaSearchController.renderDisplayStatus();
+        if (camera) mapLibre.map.flyTo({ ...camera, essential: true });
     }
 
     // 詳細モーダル表示
@@ -1654,6 +1757,7 @@ class CMapMaker extends IndoorControl {
     // EVENT: カテゴリ変更時のイベント
     eventChangeCategory() {
         list_keyword.value = "";
+        this.resetKeywordSearchState();
         let catname, selcategory = listTable.getSelCategory()
         console.log("eventChange: " + selcategory)
         const listAccordion = document.getElementById("listAccordion")
