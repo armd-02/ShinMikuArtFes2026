@@ -7,6 +7,9 @@
             "*": {
                 "*": "marker-stroked.png"
             },
+            "abutters": {
+                "retail": "shop.png"
+            },
             "advertising": {
                 "billboard": "billboard.png",
                 "board": "billboard.png",

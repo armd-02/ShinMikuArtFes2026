@@ -171,7 +171,7 @@
         "poiZoom": {
             "activity": 12,
             "ShinMikuArtFes2025": 12,
-            "bicycle_rental": 12,
+            "bicycle_rental": 15,
             "Green": 13
         },
         "mobilePoiZoom": {},
@@ -378,7 +378,8 @@
         "use": true,
         "osmjsons": [
             "./data/st_stores.json",
-            "./data/st_green.json"
+            "./data/st_green.json",
+            "./data/st_cycle.json"
         ]
     },
     "indoor": {

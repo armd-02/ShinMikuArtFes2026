@@ -19,7 +19,6 @@ const listTable = new ListTable();
 const poiCont = new PoiCont();
 const feature3d = new MapFeature3D({
     modelFactories: PlaygroundModelFactories,
-    getSelectionTitle: () => glot.get("mapFeatureSelect"),
     getFeatureLabel: id => {
         const poi = poiCont.get_osmid(id);
         if (!poi) return id;
@@ -27,7 +26,11 @@ const feature3d = new MapFeature3D({
         const tags = props.tags && typeof props.tags === "object" ? props.tags : props;
         const category = poiCont.getCatnames(tags).find(Boolean) || "";
         const name = poiCont.getOSMname(tags, glot.lang);
-        return name && name !== category ? `${category}: ${name}` : (name || category || id);
+        return name || category || id;
+    },
+    getFeatureIcon: id => {
+        const poi = poiCont.get_osmid(id);
+        return poi ? `./${Conf.icon.fgPath}/${poiCont.getIcon(poi.geojson.properties)}` : "";
     },
     onSelect: async id => {
         const poi = poiCont.get_osmid(id);

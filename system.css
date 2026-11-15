@@ -2094,3 +2094,34 @@ img.slide { flex: 0 0 auto; }
     cursor: pointer;
 }
 .facility-wikipedia[open] > summary { margin-bottom: 6px; }
+
+/* Menu for map features that share a marker position. */
+.map-feature-choice-popup .maplibregl-popup-content {
+    padding: 0;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, .2);
+}
+.map-feature-choice {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    min-width: 180px;
+    min-height: 48px;
+    padding: 12px 16px;
+    border: 0;
+    background: #fff;
+    color: #212529;
+    text-align: left;
+    cursor: pointer;
+}
+.map-feature-choice + .map-feature-choice { border-top: 1px solid #e5e5e5; }
+.map-feature-choice:hover, .map-feature-choice:focus-visible { background: #f1f3f5; }
+
+.map-feature-choice-icon {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    flex: none;
+}

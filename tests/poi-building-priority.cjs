@@ -63,6 +63,8 @@ for (const lang of ['ja', 'en']) {
     assert.equal(controller.getCatnames(realTags)[2], 'leisure=bandstand');
     assert.equal(controller.getCatnames({ tags: realTags })[2], 'leisure=bandstand');
     assert.equal(controller.getIcon(realTags), 'music.png');
+    assert.equal(controller.getIcon({ highway: 'pedestrian', abutters: 'retail' }), controller.getIcon({ landuse: 'retail' }));
+    assert.equal(controller.getCatnames({ highway: 'pedestrian', abutters: 'retail' })[0], lang === 'ja' ? '商店街' : 'Shopping street');
     assert.equal(controller.getCatnames({ building: 'roof' })[2], 'building=roof');
     assert.equal(controller.getIcon({ building: 'roof' }), 'home.png');
     assert.equal(controller.getIcon({ building: 'roof', leisure: 'unknown-value' }), 'home.png');
@@ -86,7 +88,7 @@ function evaluate(expr, tags) {
     throw new Error('Unsupported expression: ' + expr[0]);
 }
 for (const tags of [realTags, { building: 'roof' }, { building: 'roof', leisure: 'unknown-value' },
-    { building: 'yes', amenity: 'toilets' }]) {
+    { building: 'yes', amenity: 'toilets' }, { highway: 'pedestrian', abutters: 'retail' }]) {
     assert.equal(evaluate(expression, tags), controller.getIcon(tags));
 }
 console.log('PASS: building fallback, bandstand/toilet priority, Japanese/English categories and map/list icons');

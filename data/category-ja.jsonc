@@ -5,6 +5,9 @@
         "*": {
             "*": "-"
         },
+        "abutters": {
+            "retail": "商店街"
+        },
         "amenity": {
             "atm": "ATM",
             "arts_centre": "アートセンター",
