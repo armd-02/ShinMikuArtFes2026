@@ -3,7 +3,8 @@
         "columns": {
             "style": [
                 {
-                    "className": "col-12 fw-bold"
+                    "className": "col-12 fw-bold",
+                    "icon": true
                 },
                 {
                     "glotName": "act_title",
