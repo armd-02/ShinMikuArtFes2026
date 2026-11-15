@@ -2,7 +2,7 @@
     "version": 0.6,
     "generator": "Overpass API 0.7.62 7c32a7d5",
     "osm3s": {
-        "timestamp_osm_base": "2026-11-11T21:07:21Z",
+        "timestamp_osm_base": "2026-11-14T21:18:24Z",
         "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
     },
     "source": "https://armd-01.sakura.ne.jp/api/interpreter",
@@ -1344,13 +1344,13 @@
         {
             "type": "node",
             "id": 11843096441,
-            "lat": 34.7325225,
-            "lon": 135.4951277,
-            "timestamp": "2025-09-11T04:22:07Z",
-            "version": 4,
-            "changeset": 171763549,
-            "user": "Imagener",
-            "uid": 9322792,
+            "lat": 34.732609,
+            "lon": 135.4950707,
+            "timestamp": "2026-11-13T14:27:15Z",
+            "version": 5,
+            "changeset": 191896127,
+            "user": "Wish_F",
+            "uid": 6972989,
             "tags": {
                 "addr:province": "大阪府",
                 "amenity": "bicycle_rental",
@@ -1360,6 +1360,7 @@
                 "brand:ja": "ハローサイクリング",
                 "brand:wikidata": "Q91231927",
                 "capacity": "10",
+                "check_date": "2026-11-13",
                 "contact:website": "https://www.hellocycling.jp",
                 "fee": "yes",
                 "gbfs:station_id": "13585",
@@ -3315,11 +3316,11 @@
         {
             "type": "way",
             "id": 272227740,
-            "timestamp": "2026-11-01T01:31:44Z",
-            "version": 5,
-            "changeset": 191300652,
-            "user": "t_matsukura",
-            "uid": 21292672,
+            "timestamp": "2026-11-12T14:55:06Z",
+            "version": 6,
+            "changeset": 191846247,
+            "user": "K_Sakanoshita",
+            "uid": 389520,
             "nodes": [
                 2771832423,
                 9598112351,
@@ -3342,6 +3343,7 @@
                 "addr:province": "大阪府",
                 "addr:quarter": "宮原",
                 "addr:suburb": "淀川区",
+                "amenity": "school",
                 "building": "school",
                 "building:levels": "13",
                 "name": "大阪保健福祉専門学校",
@@ -3423,6 +3425,32 @@
                 "source": "GSI/KIBAN 2500;NARO",
                 "source:height": "MLIT_PLATEAU",
                 "source_ref": "http://wiki.osm.org/wiki/GSI_KIBAN"
+            }
+        },
+        {
+            "type": "node",
+            "id": 13935266683,
+            "lat": 34.7388389,
+            "lon": 135.4864703,
+            "timestamp": "2026-06-13T11:35:49Z",
+            "version": 2,
+            "changeset": 184052419,
+            "user": "t_matsukura",
+            "uid": 21292672,
+            "tags": {
+                "addr:block_number": "17番",
+                "addr:city": "大阪市",
+                "addr:housenumber": "2号",
+                "addr:neighbourhood": "3丁目",
+                "addr:postcode": "532-0006",
+                "addr:province": "大阪府",
+                "addr:quarter": "西三国",
+                "addr:suburb": "淀川区",
+                "amenity": "cafe",
+                "contact:instagram": "reminisce_2021",
+                "cuisine": "テイクアウトカフェ",
+                "name": "∞end",
+                "name:ja": "エイトエンド"
             }
         }
     ]

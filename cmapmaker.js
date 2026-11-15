@@ -745,7 +745,7 @@ class CMapMaker extends IndoorControl {
         if (!date) {
             list_category.value = "";
             list_keyword.value = "";
-        } else if (!listTable.getSelCategory().includes(config.category)) {
+        } else if (config.category !== "*" && !listTable.getSelCategory().includes(config.category)) {
             list_category.value = config.category;
             list_keyword.value = "";
         }
